@@ -25,7 +25,7 @@
 
 
 
-## Result
+# Result
 #### 這次加加上了顯卡支援跑到了大約50000 epochs 左右，效果也稍微有提升，我發現torch 套件的 torch.optim.lr_scheduler 的 ReduceLROnPlateau 就是在做UA的部分
 
 ## Model shape:
