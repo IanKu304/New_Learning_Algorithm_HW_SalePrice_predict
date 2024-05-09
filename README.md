@@ -1,3 +1,5 @@
+# 之後的作業應該都會放在這裡，會把之前的丟到previous code
+
 ## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 ## 資料簡介:
@@ -21,23 +23,23 @@
 
 
 
-
 ## Conclusion
-#### 這次一開始調了一堆參數增加了好幾層但最後結果都不太理想，後來發現一個問題是我Xavier函數沒寫好，幾乎等於沒做，補好之後發現生出來的數字可以調整scale。另一點模型表現增加最多的地方是對y做了scale，用robust scaler 調整並用來訓練，訓練完後再把test 預測出來的結果用inverse_transform轉換回去。
+#### 這次加加上了顯卡支援跑到了大約50000 epochs 左右，效果也稍微有提升，我發現torch 套件的 torch.optim.lr_scheduler 的 ReduceLROnPlateau 就是在做UA的部分
 
 ## hidden nodes:
-#### 從2 layer 11個nodes改成 6 layer 214*150*100*50*20*11*1
+#### 6 layer 214*150*100*50*20*11*1 沒做drop 
 ## initial weight:
-#### 做了 Xavier，但有做沒做最後都會收斂到差不多的點
+#### Xavier 優化了code 也丟到GPU上
 ## Activation:
-#### 主要用RELU ，tanh 不知道為什麼所有的點都預測一樣，可能是因為只有一層，Activation function 的種類影響蠻大的
+#### 主要用RELU, Activation function 的種類影響蠻大的
 ## Loss:
-#### MSE + l2 regulization 加上l2後好像沒差多少.....
+#### MSE + l2 regulization 跑得真的比較久但是新電腦有顯卡支援
 ## Optmizer epoch
-#### Adam 真的比 SGD快多了，Adam 大約200左右就收斂，SGD跑到3000 loss都還在降
+#### Adam 
 ## learning_rate
-#### 如果用RELU 大概要設在10^-2 左右，tanh的話要設到10^2 loss才會跑。RELU加上cosine 後下降更慢但比較不會出現預測結果都在180000上下的問題
+#### 起始值設10^-3, UA停止值設 10^-8, 用ReduceLROnPlateau做UA learn rate decay, loss > 0.1時 lr大概在10^-6 上下，到10^-7左右時跑的超慢
 ## Ensembles
-#### 因為看這幾個模型結果都差不多所以沒做，可能要用不同initial weight的模型來做ensembles
+#### 下次一定做
 ## Batch Normalization
-####最後有點趕所以沒做
+#### 下次一定做
+
