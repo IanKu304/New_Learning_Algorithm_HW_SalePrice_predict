@@ -28,8 +28,8 @@
 ## Result
 #### 這次加加上了顯卡支援跑到了大約50000 epochs 左右，效果也稍微有提升，我發現torch 套件的 torch.optim.lr_scheduler 的 ReduceLROnPlateau 就是在做UA的部分
 
-## hidden nodes:
-#### 6 layer 214*150*100*50*20*11*1 沒做drop ，丟到GPU上 float 和double的問題處理了一陣子...
+## Model shape:
+#### 6 layer 214 X 150 X 100 X 50 X 20 X 11 X 1 沒做drop ，丟到GPU上 float 和double的問題處理了一陣子...
 ## initial weight:
 #### 使用Xavier, 這次優化了code 也把他丟到GPU上
 ## Activation:
