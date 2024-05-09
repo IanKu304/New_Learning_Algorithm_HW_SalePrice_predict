@@ -1,5 +1,9 @@
 # 之後的作業應該都會放在這裡，會把之前的丟到previous code
 
+## 作者:
+##  統計四 顧以恩 109304033
+##  統計四 鄭皓予
+
 ## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 ## 資料簡介:
