@@ -19,4 +19,4 @@
 ## Ensembles
 #### 因為看這幾個模型結果都差不多所以沒做，可能要用不同initial weight的模型來做ensembles
 ## Batch Normalization
-####最後有點趕所以沒做
+#### 最後有點趕所以沒做
