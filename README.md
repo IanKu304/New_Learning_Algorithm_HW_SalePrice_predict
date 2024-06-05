@@ -5,7 +5,7 @@
 ## 資料來源:
 [house-prices-advanced-regression-techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data)
 ## 資料簡介:
-### X 為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及2個continuos variables。
+### X 為 1460*75的房屋資料集，共有39個categorial variables，35個ordinal variables以及1個continuos variables。
 ##### Missing Rate
 |              |total  missing | missing percentage | handling |
 |--------------|---------|----------|------------|
